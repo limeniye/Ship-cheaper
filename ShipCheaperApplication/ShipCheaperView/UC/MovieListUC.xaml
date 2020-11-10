@@ -1,0 +1,42 @@
+﻿<UserControl x:Name="uc" x:Class="ShipCheaperView.UC.MovieListUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:uc="clr-namespace:ShipCheaperView.UC"
+             xmlns:local="clr-namespace:ViewModel;assembly=ViewModel"
+             xmlns:ivm="clr-namespace:ViewModel.InterfaceViewModel;assembly=ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             d:DataContext="{x:Type ivm:IMoviesList}" Loaded="uc_Loaded">
+    <FrameworkElement.Resources>
+        <uc:ProxyImage x:Key="proxy" UriImage="{Binding ImageDefault, Mode=OneWay}" />
+    </FrameworkElement.Resources>
+    <Grid>
+        <ListBox ItemsSource="{Binding Movies}"
+                 Background="{x:Null}"
+                 HorizontalContentAlignment="Stretch"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+            <ListBox.ItemTemplate>
+                <DataTemplate DataType="{x:Type ivm:IMovieVM}">
+                    <uc:ItemUC Title="{Binding Name}"
+                               Genre="{Binding Genre}"
+                               Runtime="{Binding Runtime}"
+                               Year="{Binding Year}"
+                               Writer="{Binding Writer}"
+                               ImageSource="{Binding ImageUri}"
+                               ImageDefault="{Binding Image, Mode=OneWay, Source={StaticResource proxy}}">
+                    </uc:ItemUC>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=OneWay}"/>
+                    <Setter Property="IsEnabled" Value="False"/>
+                    <Setter Property="Margin" Value="10"/>
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+    </Grid>
+</UserControl>
