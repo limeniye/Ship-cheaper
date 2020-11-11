@@ -1,0 +1,16 @@
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\Model.dll.config
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\Model.dll
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\Model.pdb
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\Common.dll
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\IMDB.dll
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\IMDB.pdb
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\IMDB.dll.config
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\Common.pdb
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\Common.dll.config
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\bin\Debug\Newtonsoft.Json.xml
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\obj\Debug\Model.csproj.CopyComplete
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\obj\Debug\Model.dll
+C:\Users\fprin\Desktop\Ship-Cheaper\ShipCheaperApplication\Model\obj\Debug\Model.pdb

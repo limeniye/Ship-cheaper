@@ -5,39 +5,56 @@
         xmlns:ivm="clr-namespace:ViewModel.InterfaceViewModel;assembly=ViewModel"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d"
-        d:DataContext="{x:Type ivm:IMainViewModel}"
         xmlns:common="clr-namespace:Common;assembly=Common"
-        Width="800" Height="600">
+        xmlns:local="clr-namespace:ShipCheaperView.Window"
+        WindowStyle="None" ResizeMode="NoResize" 
+        Width="800" Height="600"
+        mc:Ignorable="d"
+        d:DataContext="{x:Type ivm:IMainViewModel}">
 
     <Window.Resources>
         <common:DictionaryKeyToValueConverter x:Key="ViewConverter">
             <uc:ResultMovieListUC x:Key="{x:Static ivm:ViewModeEnum.Search}"/>
+            <uc:AboutApplication x:Key="{x:Static ivm:ViewModeEnum.AboutApplication}"/>
         </common:DictionaryKeyToValueConverter>
     </Window.Resources>
 
-    <Grid Background="#1e1e1e">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-
-        <StackPanel Grid.Row="0" Orientation="Horizontal">
-            <Button Content="Search"
+    <Grid>
+        <Grid>
+            <Rectangle local:Drag.EnableDrag="True" Fill="#1e1e1e" Stroke="#f3474c"/>
+            <Button  Style="{StaticResource CloseButton}"
+                     VerticalAlignment="Top" HorizontalAlignment="Right"
+                     Click="ExitClick"/>
+        </Grid>
+        <Grid Margin="0,20,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <StackPanel Grid.Row="0" Orientation="Horizontal">
+                <Button Content="Search"
                         Command="{Binding SetViewModeCommand}"
                         CommandParameter="{x:Static ivm:ViewModeEnum.Search}" 
                         Template="{StaticResource TabStyle}" Width="200" Height="45" />
 
-            <Button Content="Favorite" 
+                <Button Content="Favorite" 
                         Command="{Binding SetViewModeCommand}"
                         CommandParameter="{x:Static ivm:ViewModeEnum.Favorite}"
                         Template="{StaticResource TabStyle}" Width="200" Height="45"/>
 
-        </StackPanel>
+                <Button Content="About App" 
+                        Command="{Binding SetViewModeCommand}"
+                        CommandParameter="{x:Static ivm:ViewModeEnum.AboutApplication}"
+                        Template="{StaticResource TabStyle}" Width="200" Height="45"/>
+
+            </StackPanel>
 
 
-        <ContentControl Grid.Row="1" Margin="5"
+            <ContentControl Grid.Row="1" Margin="5"
                         Content="{Binding ViewMode, Converter={StaticResource ViewConverter}, Mode=OneWay}"/>
 
+        </Grid>
+        
     </Grid>
 </Window>

@@ -28,4 +28,12 @@
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
     </Style>
+
+    <Style x:Key="Heading" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="../Style/Font/#Roboto Black"/>
+        <Setter Property="Foreground" Value="#489bbe"/>
+        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+    </Style>
 </ResourceDictionary>

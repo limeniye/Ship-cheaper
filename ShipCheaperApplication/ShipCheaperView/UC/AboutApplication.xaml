@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="ShipCheaperView.UC.AboutApplication"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="#1e1e1e">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <StackPanel>
+                <TextBlock Text="Application for Ship-Cheaper" 
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="50,30,0,10"
+                   FontSize="30"
+                   FontFamily="../Style/Font/#Roboto Thin"
+                   Style="{StaticResource Titel}"/>
+                <Rectangle Grid.Row="1" Fill="#f3474c" Height="3"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Text="Wasn't done"
+                           Margin="0,10,0,30"
+                           Style="{StaticResource Heading}"/>
+
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource Content}"
+                           Text="- Poorly done image work" Margin="20,0,0,0"/>
+                
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource Content}"
+                           Text="- Haven't favorite function" Margin="20,10,0,0"/>
+                
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource Content}"
+                           Text="- Haven't connent to DataBase" Margin="20,10,0,0"/>
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource Content}"
+                           Text="- Selected button of menu does not change color" Margin="20,10,0,0"/>
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource Content}"
+                           Text="- Should display the entire list of found movies, not just one." Margin="20,10,0,0"/>
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource Content}"
+                           Text="- Error if the movie is not found." Margin="20,10,0,0"/>
+
+                <TextBlock Style="{StaticResource Property}" Margin="30,30,0,0"
+                           Text="I did not manage to do these points." />
+            </StackPanel>
+
+
+            <StackPanel Grid.Column="1">
+                <TextBlock Text="Details"
+                           Margin="0,10,0,30"
+                           Style="{StaticResource Heading}"/>
+
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource Content}"
+                           Text="This is test programm was writed for Ship-Cheaper company but wasn't finished because it was sent to another company." Margin="20,0,0,0"/>
+                
+                <TextBlock TextWrapping="Wrap" Style="{StaticResource Content}"
+                           Text="U can to Search someone movie in part of search. Just type someone name of movie (For example ''Young'') and u will see search result." Margin="20,0,0,0"/>
+
+            </StackPanel>
+
+        </Grid>
+    </Grid>
+</UserControl>

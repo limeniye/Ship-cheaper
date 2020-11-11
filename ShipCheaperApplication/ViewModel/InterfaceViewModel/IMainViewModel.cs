@@ -3,7 +3,7 @@
 namespace ViewModel.InterfaceViewModel
 {
     /// <summary>Перечисление Режимов Отображения.</summary>
-    public enum ViewModeEnum { Empty, Search, Favorite }
+    public enum ViewModeEnum { Empty, Search, Favorite, AboutApplication }
     /// <summary>Перечисление Режимов Отображения контента.</summary>
     public enum ViewModeContentEnum { Empty, ListActive }
     /// <summary>Интерфейс основной ViewModel.</summary>
